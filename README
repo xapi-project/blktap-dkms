@@ -1,0 +1,8 @@
+The kernel module for blktap2
+
+To compile:
+
+make -C /lib/modules/`uname -r`/build M=$PWD
+
+Tested on debian sid, with linux-image-3.0.0-rc3-686-pae
+
