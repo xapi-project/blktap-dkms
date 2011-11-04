@@ -1,0 +1,15 @@
+Source: blktap-dkms
+Section: admin
+Priority: optional
+Maintainer: Jon Ludlam <jonathan.ludlam@eu.citrix.com>
+Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 7.0.50~),
+ dkms
+
+Package: blktap-dkms
+Architecture: i386 amd64
+Depends: ${misc:Depends}, dkms, linux-libc-dev, libc6-dev, linux-headers-generic [i386 amd64] | linux-headers
+Description: Blktap kernel component DKMS package
+ This package contains the source for the blktap kernel module. It
+ includes DKMS support so that installation of this package will
+ result in a working blktap kernel module.

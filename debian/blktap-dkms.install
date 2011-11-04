@@ -1,0 +1,5 @@
+*.c 			usr/src/blktap-2.0.90
+*.h			usr/src/blktap-2.0.90
+Makefile		usr/src/blktap-2.0.90
+dkms.conf		usr/src/blktap-2.0.90
+
