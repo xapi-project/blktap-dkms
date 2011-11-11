@@ -1,1 +1,14 @@
-Not defined yet
+Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=173
+Upstream-Name: blktap-dkms
+Upstream-Contact: Jonathan Ludlam <Jonathan.Ludlam@eu.citrix.com>
+Source: git clone http://github.com/jonludlam/blktap-dkms.git
+
+Files: debian/*
+Copyright: (c) 2011, Jon Ludlam <jonathan.ludlam@eu.citrix.com>
+License: BSD (2 clauses)
+
+Files: *
+Copyright: (c) 2011, Citrix Systems, Inc.
+License: GPLv2
+
+
