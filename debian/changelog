@@ -1,5 +1,5 @@
 blktap-dkms (2.0.90-1) unstable; urgency=low
 
-  * Initial release
+  * Initial release (Closes: #648691)
 
- -- Jon Ludlam <jonathan.ludlam@eu.citrix.com>  Fri, 04 Nov 2011 12:56:27 +0400
+ -- Thomas Goirand <zigo@debian.org>  Fri, 04 Nov 2011 12:56:27 +0400
