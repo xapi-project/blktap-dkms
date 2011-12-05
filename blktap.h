@@ -23,6 +23,7 @@
 #ifndef _BLKTAP_H_
 #define _BLKTAP_H_
 
+#include <linux/module.h>
 #include <linux/mm.h>
 #include <linux/fs.h>
 #include <linux/cdev.h>
