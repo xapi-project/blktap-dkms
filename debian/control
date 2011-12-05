@@ -5,8 +5,8 @@ Maintainer: Debian Xen Team <pkg-xen-devel@lists.alioth.debian.org>
 Uploaders: Jon Ludlam <jonathan.ludlam@eu.citrix.com>, Thomas Goirand <zigo@debian.org>
 Standards-Version: 3.9.2
 Build-Depends: debhelper (>= 7.0.50~), dkms
-Vcs-Browser: https://github.com/xen-org/blktap-dkms
-Vcs-Git: git://github.com/xen-org/blktap-dkms.git
+Vcs-Browser: http://git.debian.org/?p=pkg-xen/blktap-dkms.git
+Vcs-Git: http://git.debian.org/git/pkg-xen/blktap-dkms.git
 Homepage: http://www.xen.org/
 
 Package: blktap-dkms
