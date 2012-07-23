@@ -26,6 +26,7 @@
 #include <linux/poll.h>
 #include <linux/blkdev.h>
 #include <linux/mman.h>
+#include <linux/mm.h>
 
 #include "blktap.h"
 
@@ -203,7 +204,7 @@ blktap_ring_map_request(struct blktap *tap, struct file *filp,
 
 	pgoff = 1 + request->usr_idx * BLKTAP_SEGMENT_MAX;
 
-	addr = do_mmap_pgoff(filp, addr, len, prot, flags, pgoff);
+	addr = vm_mmap(filp, addr, len, prot, flags, pgoff);
 
 	return IS_ERR_VALUE(addr) ? addr : 0;
 }
@@ -223,7 +224,7 @@ blktap_ring_unmap_request(struct blktap *tap,
 	addr  = MMAP_VADDR(ring->user_vstart, request->usr_idx, 0);
 	len   = request->nr_pages << PAGE_SHIFT;
 
-	err = do_munmap(current->mm, addr, len);
+	err = vm_munmap(addr, len);
 	WARN_ON_ONCE(err);
 }
 
