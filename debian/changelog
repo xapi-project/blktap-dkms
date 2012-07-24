@@ -1,3 +1,10 @@
+blktap-dkms (2.0.92-1) unstable; urgency=low
+
+  * Bump upstream version
+  * Fix Launchpad bug 1028135: links against missing symbols in kernel 3.5
+
+ -- Mike McClurg <mike.mcclurg@citrix.com>  Tue, 24 Jul 2012 11:53:56 +0100
+
 blktap-dkms (2.0.91-1) unstable; urgency=low
 
   * New upstream release
