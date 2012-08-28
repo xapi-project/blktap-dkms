@@ -203,7 +203,7 @@ blktap_ring_map_request(struct blktap *tap, struct file *filp,
 
 	pgoff = 1 + request->usr_idx * BLKTAP_SEGMENT_MAX;
 
-	addr = do_mmap_pgoff(filp, addr, len, prot, flags, pgoff);
+	addr = vm_mmap(filp, addr, len, prot, flags, pgoff << PAGE_SHIFT);
 
 	return IS_ERR_VALUE(addr) ? addr : 0;
 }
