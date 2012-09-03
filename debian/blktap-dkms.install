@@ -1,4 +1,4 @@
-*.c 			usr/src/blktap-2.0.92
-*.h				usr/src/blktap-2.0.92
-Makefile		usr/src/blktap-2.0.92
-dkms.conf		usr/src/blktap-2.0.92
+*.c 			usr/src/blktap-2.0.93
+*.h				usr/src/blktap-2.0.93
+Makefile		usr/src/blktap-2.0.93
+dkms.conf		usr/src/blktap-2.0.93

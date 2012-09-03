@@ -1,3 +1,9 @@
+blktap-dkms (2.0.93-1) experimental; urgency=low
+
+  * Bump upstream version (fixes issues with 3.5 kernel)
+
+ -- Mike McClurg <mike.mcclurg@citrix.com>  Mon, 03 Sep 2012 16:18:11 +0100
+
 blktap-dkms (2.0.92-1) experimental; urgency=low
 
   * Bump upstream version
