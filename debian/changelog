@@ -1,0 +1,24 @@
+blktap-dkms (2.0.93-1) experimental; urgency=low
+
+  * Bump upstream version (fixes issues with 3.5 kernel)
+
+ -- Mike McClurg <mike.mcclurg@citrix.com>  Mon, 03 Sep 2012 16:18:11 +0100
+
+blktap-dkms (2.0.92-1) experimental; urgency=low
+
+  * Bump upstream version
+  * Builds against kernel 3.5 (Closes LP: #1028135)
+
+ -- Mike McClurg <mike.mcclurg@citrix.com>  Tue, 24 Jul 2012 11:53:56 +0100
+
+blktap-dkms (2.0.91-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Jon Ludlam <jonathan.ludlam@eu.citrix.com>  Mon, 05 Dec 2011 16:08:34 +0000
+
+blktap-dkms (2.0.90-1) unstable; urgency=low
+
+  * Initial release (Closes: #648691)
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 04 Nov 2011 12:56:27 +0400
