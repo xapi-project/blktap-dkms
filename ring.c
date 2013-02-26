@@ -14,7 +14,7 @@
  * GNU General Public License version 2 for more details.
  *
  * You should have received a copy of the GNU General Public License
- * version 2 along with Blktap2.  If not, see 
+ * version 2 along with Blktap2.  If not, see
  * <http://www.gnu.org/licenses/>.
  *
  *
@@ -27,12 +27,19 @@
 #include <linux/blkdev.h>
 #include <linux/mman.h>
 
+/* VM_RESERVED has disappeared starting from Linux 3.7 and has been
+ * replaced by VM_DONTDUMP since then.
+ */
+#ifndef VM_DONTDUMP
+#define VM_DONTDUMP VM_RESERVED
+#endif
+
 #include "blktap.h"
 
 int blktap_ring_major;
 static struct cdev blktap_ring_cdev;
 
- /* 
+ /*
   * BLKTAP - immediately before the mmap area,
   * we have a bunch of pages reserved for shared memory rings.
   */
@@ -435,7 +442,7 @@ blktap_ring_mmap_request(struct blktap *tap,
 	}
 
 	vma->vm_flags |= VM_DONTCOPY;
-	vma->vm_flags |= VM_RESERVED;
+	vma->vm_flags |= VM_DONTDUMP;
 
 	return 0;
 }
@@ -471,7 +478,7 @@ blktap_ring_mmap_sring(struct blktap *tap, struct vm_area_struct *vma)
 	vma->vm_private_data = tap;
 
 	vma->vm_flags |= VM_DONTCOPY;
-	vma->vm_flags |= VM_RESERVED;
+	vma->vm_flags |= VM_DONTDUMP;
 
 	vma->vm_ops = &blktap_ring_vm_operations;
 
