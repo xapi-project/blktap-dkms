@@ -29,6 +29,7 @@
 #include <linux/cdev.h>
 #include <linux/init.h>
 #include <linux/scatterlist.h>
+#include <linux/mutex.h>
 #include "linux-blktap.h"
 
 extern int blktap_debug_level;
@@ -67,6 +68,7 @@ struct blktap_ring {
 	struct task_struct            *task;
 
 	struct vm_area_struct         *vma;
+	struct mutex                   vma_lock;
 	struct blktap_front_ring       ring;
 	unsigned long                  ring_vstart;
 	unsigned long                  user_vstart;
