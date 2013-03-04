@@ -26,6 +26,7 @@
 #include <linux/poll.h>
 #include <linux/blkdev.h>
 #include <linux/mman.h>
+#include <linux/mm.h>
 
 /* VM_RESERVED has disappeared starting from Linux 3.7 and has been
  * replaced by VM_DONTDUMP since then.
@@ -230,7 +231,7 @@ blktap_ring_unmap_request(struct blktap *tap,
 	addr  = MMAP_VADDR(ring->user_vstart, request->usr_idx, 0);
 	len   = request->nr_pages << PAGE_SHIFT;
 
-	err = do_munmap(current->mm, addr, len);
+	err = vm_munmap(addr, len);
 	WARN_ON_ONCE(err);
 }
 
